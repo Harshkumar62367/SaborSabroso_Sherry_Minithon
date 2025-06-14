@@ -131,7 +131,7 @@ export async function POST(req: NextRequest) {
     const data = encodeFunctionData({
       abi: abi,
       functionName: "storeFeedback",
-      args: [feedback, BigInt(feedbackScore)],
+      args: [feedback, feedbackScore],
     });
 
     // Create smart contract transaction
@@ -242,7 +242,6 @@ function calculateFeedbackScore(feedback: string, rating: number): number {
   // Round to nearest integer for Solidity compatibility
   return Math.round(score);
 }
-
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function OPTIONS(request: NextRequest) {
