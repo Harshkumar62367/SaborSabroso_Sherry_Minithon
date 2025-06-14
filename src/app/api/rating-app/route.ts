@@ -34,7 +34,7 @@ export async function GET(req: NextRequest) {
           path: `/api/rating-app`,
           params: [
             {
-              name: "Your Feedback",
+              name: "feedback",
               label: "Feedback!",
               type: "textarea",
               required: true,
@@ -42,7 +42,7 @@ export async function GET(req: NextRequest) {
                 "Enter the feedback you want to store on the blockchain",
             },
             {
-              name: "Rating",
+              name: "rating",
               label: "Give your ratings (Between 1 and 5)",
               type: "number",
               required: true,
