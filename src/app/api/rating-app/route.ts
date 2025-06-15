@@ -44,11 +44,45 @@ export async function GET(req: NextRequest) {
             {
               name: "rating",
               label: "Give your ratings (Between 1 and 5)",
-              type: "number",
+              type: "int8",
               required: true,
               description:
                 "Enter the rating you want to store on the blockchain",
             },
+          ],
+        },
+        {
+          type: "dynamic",
+          label: "Update Feedback",
+          description: "Share your new feedback",
+          chains: { source: "fuji" },
+          path: `/api/rating-app/updateMessage`,
+          params: [
+            {
+              name: "feedback",
+              label: "Updated Feedback! (Update your last feedback)",
+              type: "textarea",
+              required: true,
+              description:
+                "Enter the new feedback you want to store on the blockchain",
+            }
+          ],
+        },
+        {
+          type: "dynamic",
+          label: "Update Rating",
+          description: "Share your new rating",
+          chains: { source: "fuji" },
+          path: `/api/rating-app/updateRating`,
+          params: [
+            {
+              name: "rating",
+              label: "New Rating (Update your last rating)",
+              type: "int8",
+              required: true,
+              description:
+                "Enter the new rating you want to store on the blockchain",
+            }
           ],
         },
       ],
@@ -93,7 +127,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Validate rating is a number
+    // Validate rating is a number. Although it is already validated in the frontend by Sherry sdk, it is done again here for security reasons.
     const ratingNum = Number(rating);
     if (isNaN(ratingNum)) {
       return NextResponse.json(
@@ -109,7 +143,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Validate rating is between 1 and 5
+    // Validating rating is between 1 and 5
     if (ratingNum < 1 || ratingNum > 5) {
       return NextResponse.json(
         { error: "Rating must be between 1 and 5" },
