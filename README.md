@@ -44,8 +44,8 @@ Once fully developed, this app will serve as a one-stop platform for generating 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Harshkumar62367/SaberSabroso_Sherry_Minithon.git
-cd SaberSabroso_Sherry_Minithon
+git clone https://github.com/Harshkumar62367/SaborSabroso_Sherry_Minithon.git
+cd SaborSabroso_Sherry_Minithon
 ```
 
 2. Install dependencies:
