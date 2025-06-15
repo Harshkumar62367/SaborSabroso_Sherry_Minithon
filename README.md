@@ -17,6 +17,8 @@ Idea is to create MiniApps that can be attached to restaurant profiles on platfo
 
 Once fully developed, this app will serve as a one-stop platform for generating these MiniApps for restaurants and linking them to X. Restaurant owners will authenticate on the homepage, fill in some details, and create a unique Sherry link, which can be added to an X tweet and pinned. After visiting the restaurant, customers can visit the restaurant’s X profile to submit feedback. Using Sherry Actions’ actionFlow (with dynamic actions), in future, we will reward feedback providers with custom tokens as appreciation, which can be redeemed for discounts on future visits. We also plan to implement a custom rendering of the average rating on the MiniApp frontend once this feature is available in the Sherry SDK. I will continue development of this app beyond the Minithon to enhance the app further with the database addition once the hackathon ends.
 
+I have also added a **custom fun algorithm** in the app, that checks for `user sentiment` in feedback message, and increases or decrease the rating provided if the message mismatch with the rating provided. However, I am still facing issues with averageRating as Solidity don't store float number, but I can solve this with database integration.
+
 ## 🔗 Important Links
 
 - [Live Demo](https://saber-sabroso-sherry.vercel.app/)
