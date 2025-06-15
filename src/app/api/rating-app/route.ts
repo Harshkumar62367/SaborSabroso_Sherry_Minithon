@@ -19,8 +19,8 @@ export async function GET(req: NextRequest) {
     const serverUrl = `${protocol}://${host}`;
 
     const metadata: Metadata = {
-      url: "https://sherry.social",
-      icon: "https://avatars.githubusercontent.com/u/117962315",
+      url: "https://saber-sabroso-sherry.vercel.app/",
+      icon: "https://myawsbucket79403825.s3.eu-north-1.amazonaws.com/sherry1.png",
       title: "Review our Restaurant",
       baseUrl: serverUrl,
       description:
@@ -126,6 +126,9 @@ export async function POST(req: NextRequest) {
 
     // Calculate feedback score using our custom algorithm
     const feedbackScore = calculateFeedbackScore(feedback, ratingNum);
+
+    console.log("feedbackScore", feedbackScore);
+    console.log("feedback", feedback);
 
     // Encode the contract function data
     const data = encodeFunctionData({
