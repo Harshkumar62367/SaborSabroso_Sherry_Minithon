@@ -32,7 +32,7 @@ export default function Home() {
                 stars.
               </p>
               <a
-                href="/api/rating-app"
+                href="https://app.sherry.social/action?url=https://saber-sabroso-sherry.vercel.app/api/rating-app"
                 className="inline-block px-6 py-3 bg-foreground text-background rounded-full hover:bg-[#383838] dark:hover:bg-[#ccc] transition-colors"
               >
                 Rate Now
@@ -48,19 +48,28 @@ export default function Home() {
               </p>
               <div className="flex gap-4 justify-center">
                 <a
-                  href="/api/rating-app"
+                  href="https://app.sherry.social/action?url=https://saber-sabroso-sherry.vercel.app/api/rating-app"
                   className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                 >
                   Update Feedback
                 </a>
                 <a
-                  href="/api/rating-app"
+                  href="https://app.sherry.social/action?url=https://saber-sabroso-sherry.vercel.app/api/rating-app"
                   className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                 >
                   Update Rating
                 </a>
               </div>
             </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <a
+              href="/api/rating-app"
+              className="inline-block px-8 py-4 bg-primary text-white rounded-full hover:bg-primary-hover transition-colors shadow-lg hover:shadow-xl font-semibold text-lg border-2 border-primary hover:border-primary-hover"
+            >
+              View Dynamic Response Structure
+            </a>
           </div>
         </div>
       </main>
