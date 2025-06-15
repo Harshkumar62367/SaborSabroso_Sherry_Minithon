@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #e65100;
+  --primary-hover: #f57c00;
 }
 
 @theme inline {
@@ -16,11 +18,42 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #ff8f00;
+    --primary-hover: #ffb74d;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom styles for food review theme */
+.rounded-full {
+  transition: transform 0.2s ease-in-out;
+}
+
+.rounded-full:hover {
+  transform: scale(1.05);
+}
+
+/* Add a subtle food-themed background pattern */
+main {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 0
+  );
+  background-size: 20px 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  main {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 0
+    );
+  }
 }
