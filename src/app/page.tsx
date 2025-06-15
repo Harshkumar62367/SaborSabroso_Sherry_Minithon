@@ -16,7 +16,7 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl font-bold mb-4">
-            Welcome to Sherrys Sabor Sabroso
+            Welcome to Sabor Sabroso
           </h1>
           <p className="text-xl mb-8 text-gray-600 dark:text-gray-300">
             Share your dining experience and help us serve you better
